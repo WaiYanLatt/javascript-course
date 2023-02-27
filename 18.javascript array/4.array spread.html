@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array spread</title>
+</head>
+<body>
+    
+    <!-- 
+        array spread သည်  array ထဲမှာ ရှိတဲ့ data တွေကို ခွဲ ခြား စိတ် ဖြာသော နည်း ဖြစ် သည်။
+     -->
+
+
+
+
+    <script>
+
+
+          
+
+       // array spread
+        let fruits = ["apple","orange","banana"];
+        let pets = ["dog","cat","fish"];   
+
+        // let results = [ ["apple","orange","banana"],["dog","cat","fish"]]
+        let results = [...fruits,...pets];
+
+        let add = ["pineapple",...["apple","orange","banana"],"pineapple"]
+
+        let nuns = [3,4];
+        function sum(a,b){
+            return a + b;
+        }
+
+
+
+
+    </script>
+</body>
+</html>

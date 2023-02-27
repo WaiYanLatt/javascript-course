@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOP Clsses & Object</title>
+</head>
+<body>
+    
+
+
+    <script>
+       
+    //    class Car {
+    //       color = "Red"
+    //       wheels = 4
+    //       drive(){
+    //         console.log("This car is driving")
+    //       }
+    //    }
+
+    //    let BMW = new Car
+
+    // class Car {
+    //    static color = "Red"
+
+    //    static sum(a , b){
+    //       return a + b ;
+    //    }
+    // }
+
+    //Access-Controls Modifier
+    //Publish , Private , Protected ,Static
+
+    class Car {
+        #hp = 100
+        color = "Red"
+
+        static info(){
+            console.log(`Horse Power : ${this.#hp}`)
+        }
+    }
+
+    let suzuki =new Car()
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback Function</title>
+</head>
+<body>
+
+    
+
+   <!-- 
+    callback function ဆိုသည်မှာ function တစ်ခုကို ခေါ် ယူလိုက်ပြီး အဲ့ ဒီ function ကို ထပ်ဆင့် ပြီး အသုံး ပြုလိုက် တာ ကို 
+    callback function ဟုခေါ်် သည်
+   -->
+
+
+
+   <script>
+        
+     // callback function
+      
+
+     function ok(num,fun){
+        let result = fun(num);
+        return result * 5;
+     }
+
+     
+    // console.log( 
+    //     ok (5, function(x){
+    //     return x + 5;
+    //     })
+    //     )
+
+   console.log(
+      ok (5 , function(x){
+        return x * x;
+     })
+    )
+
+   
+   </script>
+
+
+</body>
+</html>

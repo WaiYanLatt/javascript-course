@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>If statement</title>
+  </head>
+  <body>
+    <script>
+      // javascript If statement
+
+      //  if statement
+      //  if (conditional)
+      //     // if true
+      //  else
+      //     // if false
+
+      // if (conditional) {
+      //     //if true
+      // } else {
+      //     // if false
+      // }
+
+      // let nums = [1,34,33,3,6,4]
+
+      // let result = nums.map(function(n){
+      //     if(n === 1) n += 6;
+      //     return n;
+      // })
+
+      let people = [
+        { name: "Kyaw Kyaw", age: "23", gender: "m" },
+        { name: "Aung Aung", age: "25", gender: "m" },
+        { name: "Hla Hla", age: "24", gender: "f" },
+        { name: "Hla Aung", age: "21" },
+      ];
+
+      // let result = people.map(function (p) {
+      //   if (p.gender) {
+      //     // true
+      //     if(p.gender === "m" || p.gender === "M"){
+      //       p.gender = "Male"
+      //     }
+
+      //     if(p.gender === "f" || p.gender === "F"){
+      //       p.gender = "Female"
+      //     }
+
+      //   } else {
+      //     // false
+      //     p.gender = "unknown"
+      //   }
+
+      //   return p
+
+      // });
+
+      let result = people.map(function (p) {
+        if (p.gender === "m" || p.gender === "M") {
+          p.gender = "Male";
+        } else if (p.gender === "f" || p.gender === "F") {
+          p.gender = "Female";
+        } else {
+          p.gender = "Unknown";
+        }
+        return p
+      });
+    </script>
+  </body>
+</html>
