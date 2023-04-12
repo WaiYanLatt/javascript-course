@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    .text {
+      display: inline-block;
+      margin: 0;
+    }
+    .mr{
+      margin-right: 10px;
+    }
+  </style>
+  <body>
+    <!-- <div class="text">Hello There</div>
+
+    <button class="btn">Click me</button> -->
+
+    <button class="btn"><p class="text"><i class="fa-solid fa-music mr"></i>New Music</p></button>
+
+    <script>
+      //html event attribute
+      // function app(){
+      //     document.querySelector('.text').textContent = "hey there"
+      // }
+
+      //add eventlistener
+      let btn = document.querySelector(".btn");
+      btn.addEventListener("mouseover", () => {
+        document.querySelector(".text").innerHTML = '<i class="fa-solid fa-cart-shopping mr"></i>Add To Cart';
+      });
+
+      btn.addEventListener("mouseout", () => {
+        document.querySelector(".text").innerHTML = '<i class="fa-solid fa-music mr"></i>New Music';
+      });
+
+      //On Click, on keydown , onfocus
+      //   document.querySelector(".btn").onclick = (e) => {
+      //     document.querySelector(".text").textContent = "hey there";
+      //   };
+    </script>
+  </body>
+</html>

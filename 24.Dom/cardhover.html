@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card hover</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .bg {
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 18px 50px -10px;
+        width: 350px;
+        height: auto;
+        border-radius: 15px;
+        padding: 20px;
+      }
+      .text{
+            display: none;
+            font-size: 3rem;
+            color: red;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <h1>Hello Every One</h1>
+      <p>I Finally Got That I Finally Got That I Finally Got That I Finally Got
+        That I Finally Got That I Finally Got That I Finally Got That I Finally
+        Got That I Finally Got That I Finally Got That I Finally Got That I
+        Finally Got That I Finally Got That I Finally Got ThatI Finally Got That
+        I Finally Got ThatI Finally Got ThatI Finally Got ThatI Finally Got</p>
+      <div class="text">
+          I Love You
+      </div>
+    </div>
+    <script>
+        let bg = document.querySelector('.bg');
+        bg.addEventListener('mouseover', () => {
+            document.querySelector('.text').style.display = "block"
+        })
+        bg.addEventListener('mouseout', () => {
+            document.querySelector('.text').style.display = "none"
+        })
+    </script>
+  </body>
+</html>
