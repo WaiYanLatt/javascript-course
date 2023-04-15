@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <style>
+      .boxs {
+        width: 600px;
+        margin: 30px auto;
+        text-align: center;
+      }
+      .box {
+        height: 20rem;
+      }
+      #box1 {
+        background-color: aqua;
+      }
+      #box2 {
+        background-color: greenyellow;
+        display: none;
+      }
+      #box3 {
+        background-color: red;
+        display: none;
+      }
+      #prev,
+      #next {
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+        border: 0px;
+        background-color: orange;
+        font-weight: bold;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .w-full {
+        width: 100%;
+        object-fit: cover;
+        height: 20rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxs">
+      <div class="box" id="box1">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1677178660405-38e552adf46c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+          alt=""
+          class="w-full"
+        />
+      </div>
+      <div class="box" id="box2">
+        <img
+          src="https://plus.unsplash.com/premium_photo-1680721444847-33e37f1bd4d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80"
+          alt=""
+          class="w-full"
+        />
+      </div>
+      <div class="box" id="box3">
+        <img
+          src="https://images.unsplash.com/photo-1681276311947-ebee32b4d4cc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=500&q=60"
+          alt=""
+          class="w-full"
+        />
+      </div>
+
+      <button id="prev">Prev</button>
+      <button id="next">Next</button>
+    </div>
+
+    <script>
+      let box = 1;
+
+      function next() {
+        document.querySelector(`#box${box}`).style.display = "none";
+        box++;
+        if (box > 3) box = 1;
+        document.querySelector(`#box${box}`).style.display = "block";
+      }
+
+      function prev() {
+        document.querySelector(`#box${box}`).style.display = "none";
+        box--;
+        if (box < 1) box = 3;
+        document.querySelector(`#box${box}`).style.display = "block";
+      }
+
+      document.querySelector("#next").onclick = next;
+      document.querySelector("#prev").onclick = prev;
+
+      setInterval(next, 3000);
+    </script>
+  </body>
+</html>
